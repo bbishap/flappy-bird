@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:flappybirdclone/bird.dart';
 import 'package:flutter/material.dart';
 
 import 'barriers.dart';
+import 'bird.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
+    super.initState();
     setState(() {
       birdYaxis = 0;
       time = 0;
@@ -114,7 +115,7 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(color: Colors.white),
             ),
             actions: [
-              FlatButton(
+              TextButton(
                 child: Text(
                   "PLAY AGAIN",
                   style: TextStyle(color: Colors.white),
@@ -128,7 +129,6 @@ class _HomePageState extends State<HomePage> {
                     gameHasStarted = false;
                   });
                   Navigator.of(context).pop();
-                  
                 },
               )
             ],
